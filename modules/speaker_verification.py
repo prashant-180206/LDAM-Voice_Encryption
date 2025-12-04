@@ -18,10 +18,10 @@ import threading
 import time
 import uuid
 from speechbrain.inference.speaker import SpeakerRecognition
-from config import REF_VOICE, MIN_ACCEPT_SECONDS, NEXT_RECORD_GAP_SECONDS, AUDIO_TEMP_BASE, AUDIO_FIXED_BASE
-from audio_handler import write_wav_from_bytes, fix_audio_format, temp_files
-from arduino_comm import send_command_to_arduino
-from config import signal_to_command
+from modules.config import REF_VOICE, MIN_ACCEPT_SECONDS, NEXT_RECORD_GAP_SECONDS, AUDIO_TEMP_BASE, AUDIO_FIXED_BASE
+from modules.audio_handler import write_wav_from_bytes, fix_audio_format, temp_files
+from modules.arduino_comm import send_command_to_arduino
+from modules.config import signal_to_command
 
 # Global verification model and thread safety
 verification = None

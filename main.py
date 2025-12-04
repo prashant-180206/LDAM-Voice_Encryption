@@ -22,7 +22,7 @@ The system will initialize all components and start listening for voice commands
 Say the wake word to begin, speak commands, and use the end word to stop listening.
 """
 
-from voice_controller import run_voice_control_system
+from modules.voice_controller import run_voice_control_system
 
 def main():
     """

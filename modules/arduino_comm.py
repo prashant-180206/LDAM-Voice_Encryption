@@ -15,7 +15,7 @@ Key responsibilities:
 
 import serial
 import time
-from config import ARDUINO_PORT, ARDUINO_BAUD
+from modules.config import ARDUINO_PORT, ARDUINO_BAUD
 
 # Global serial connection object
 ser = None

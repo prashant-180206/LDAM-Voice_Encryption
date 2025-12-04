@@ -17,7 +17,7 @@ import json
 import os
 import sys
 from vosk import Model, KaldiRecognizer
-from config import VOSK_MODEL_PATH, SAMPLE_RATE, WAKE_WORD, END_WORD, signal_to_command
+from modules.config import VOSK_MODEL_PATH, SAMPLE_RATE, WAKE_WORD, END_WORD, signal_to_command
 
 # Global speech recognition objects
 model = None

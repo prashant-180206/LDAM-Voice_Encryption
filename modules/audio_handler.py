@@ -20,7 +20,7 @@ import numpy as np
 import librosa
 import os
 from collections import deque
-from config import SAMPLE_RATE, PRE_ROLL_SECONDS, MIN_VERIFY_SECONDS, TRIM_TOP_DB, TARGET_RMS
+from modules.config import SAMPLE_RATE, PRE_ROLL_SECONDS, MIN_VERIFY_SECONDS, TRIM_TOP_DB, TARGET_RMS
 
 # Global audio queue for inter-thread communication
 audio_q = queue.Queue()

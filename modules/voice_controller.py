@@ -20,14 +20,14 @@ import sounddevice as sd
 from collections import deque
 
 # Import all required modules
-from config import SAMPLE_RATE, CHANNELS, WAKE_WORD, END_WORD, POST_BUFFER_SECONDS
-from audio_handler import audio_callback, maintain_rolling_buffer, rolling_chunks, audio_q
-from arduino_comm import initialize_serial_connection, close_serial_connection
-from speech_recognition import (initialize_speech_recognition, process_audio_chunk, 
+from modules.config import SAMPLE_RATE, CHANNELS, WAKE_WORD, END_WORD, POST_BUFFER_SECONDS
+from modules.audio_handler import audio_callback, maintain_rolling_buffer, rolling_chunks, audio_q
+from modules.arduino_comm import initialize_serial_connection, close_serial_connection
+from modules.speech_recognition import (initialize_speech_recognition, process_audio_chunk, 
                                extract_command_words, contains_wake_word, contains_end_word)
-from speaker_verification import (initialize_speaker_verification, verify_reference_voice,
+from modules.speaker_verification import (initialize_speaker_verification, verify_reference_voice,
                                  verify_and_execute_commands, can_record_now)
-from utils import filter_allowed_commands, calculate_audio_duration_seconds
+from modules.utils import filter_allowed_commands, calculate_audio_duration_seconds
 
 # Global system state variables
 is_recording = False
@@ -306,7 +306,7 @@ def shutdown_system():
     close_serial_connection()
     
     # Clean up temporary files
-    from audio_handler import cleanup_temp_files
+    from modules.audio_handler import cleanup_temp_files
     cleanup_temp_files()
     
     print("✅ System shutdown completed successfully")

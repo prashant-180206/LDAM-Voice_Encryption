@@ -15,7 +15,7 @@ Key responsibilities:
 
 import time
 import threading
-from config import TRIGGER_COOLDOWN
+from modules.config import TRIGGER_COOLDOWN
 
 # Thread-safe tracking of last command trigger times
 last_trigger_time = {}
